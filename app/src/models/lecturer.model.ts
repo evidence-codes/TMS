@@ -10,15 +10,6 @@ interface ILecturer {
 
 const lecturerSchema = new Schema<ILecturer>(
   {
-    fullname: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
     faculty_no: {
       type: String,
       required: true,
@@ -28,7 +19,17 @@ const lecturerSchema = new Schema<ILecturer>(
       type: String,
       required: true,
     },
+    fullname: {
+      type: String,
+      required: true,
+    },
     mobile: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+
+    email: {
       type: String,
       required: true,
       unique: true,
